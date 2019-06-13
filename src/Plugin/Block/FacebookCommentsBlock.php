@@ -274,11 +274,11 @@ class FacebookCommentsBlock extends BlockBase {
       $form_state->setErrorByName('facebook_comments_block_settings_domain', $this->t('Number of posts must be a valid number.'));
     }
 
-    $width = $form_state->getValue(array('facebook_comments_settings', 'facebook_comments_block_settings_width'));
-    if (!is_numeric($width)) {
-      drupal_set_message($this->t('Width must be a valid number.'), 'error');
-      $form_state->setErrorByName('facebook_comments_block_settings_domain', $this->t('Width must be a valid number.'));
-    }
+    // $width = $form_state->getValue(array('facebook_comments_settings', 'facebook_comments_block_settings_width'));
+    // if (!is_numeric($width)) {
+    //   drupal_set_message($this->t('Width must be a valid number.'), 'error');
+    //   $form_state->setErrorByName('facebook_comments_block_settings_domain', $this->t('Width must be a valid number.'));
+    // }
   }
 
   /**
