@@ -56,6 +56,12 @@ function facebook_comments_block_theme($existing, $type, $theme, $path) {
 function facebook_comments_block_page_attachments(array &$page) {
   $config = \Drupal::config('block.block.facebookcommentsblock');
   $facebook_app_id = $config->get('settings')['facebook_comments_block_settings_app_id'];
+  if($facebook_app_id=='')
+  {
+    $config = \Drupal::config('facebook_comments.settings');
+    $facebook_app_id = $config->get('facebook_comments_appid');
+  }
+
   $facebook_app_id_meta = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
